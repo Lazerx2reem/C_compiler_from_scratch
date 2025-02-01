@@ -8,7 +8,9 @@ typedef enum{
 } Opcode;
 
 typedef struct {
-  uint8_t* code;
+ 	int count;
+	int capacity; 
+	uint8_t* code;
 } Chunk;
 
 #endif
