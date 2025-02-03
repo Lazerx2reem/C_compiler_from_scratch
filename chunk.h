@@ -1,5 +1,5 @@
-#ifndef clox_chunk-h
-#define clox_chunk-h
+#ifndef clox_chunk_h
+#define clox_chunk_h
 
 #include "common.h"
 
@@ -15,6 +15,6 @@ typedef struct {
 
 void initChunk(Chunk* chunk);
 void freeChunk(Chunk* chunk);
-void writeChunk(Chunk* chunk, unit8_t byte);
+void writeChunk(Chunk* chunk, uint8_t byte);
 
 #endif
