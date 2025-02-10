@@ -9,5 +9,6 @@ typedef struct {
 
 void initVM();
 void freeVM();
+InterpretResult interpret(Chunk* chunk);
 
 #endif
