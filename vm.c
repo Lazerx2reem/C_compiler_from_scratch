@@ -1,5 +1,6 @@
 #include "common.h"
 #include "vm.h"
+#include "debug.h"
 #include <stdio.h>
 
 VM vm; 
