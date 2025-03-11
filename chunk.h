@@ -6,7 +6,8 @@
 
 typedef enum{
 	OP_CONSTANT,
-	OP_RETURN, /*return from the current function*/
+	OP_NEGATE,
+	OP_RETURN,
 } Opcode;
 
 typedef struct {
