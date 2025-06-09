@@ -29,3 +29,12 @@ Token scanToken() {
 static bool isAtEnd() {
   return *scanner.current == '\0';
 }
+
+static Token makeToken(TokenType type) {
+  Token token;
+  token.type = type;
+  token.start = scanner.start;
+  token.length = (int)(scanner.current - scanner.start);
+  token.line = scanner.line;
+  return token;
+}
