@@ -38,3 +38,12 @@ static Token makeToken(TokenType type) {
   token.line = scanner.line;
   return token;
 }
+
+static Token errorToken(const char* message) {
+  Token token;
+  token.type = TOKEN_ERROR;
+  token.start = message;
+  token.length = (int)strlen(message);
+  token.line = scanner.line;
+  return token;
+}
