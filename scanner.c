@@ -25,3 +25,7 @@ Token scanToken() {
 
   return errorToken("Unexpected character.");
 }
+
+static bool isAtEnd() {
+  return *scanner.current == '\0';
+}
