@@ -117,3 +117,8 @@ static void skipWhitespace() {
     }
   }
 }
+
+static char peekNext() {
+  if (isAtEnd()) return '\0';
+  return scanner.current[1];
+}
