@@ -114,7 +114,7 @@ static void skipWhitespace() {
         break;
       default:
         return;
-    }
+      }
   }
 }
 
