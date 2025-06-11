@@ -90,3 +90,18 @@ static Token errorToken(const char* message) {
   token.line = scanner.line;
   return token;
 }
+
+static void skipWhitespace() {
+  for (;;) {
+    char c = peek();
+    switch (c) {
+      case ' ':
+      case '\r':
+      case '\t':
+        advance();
+        break;
+      default:
+        return;
+    }
+  }
+}
