@@ -118,6 +118,19 @@ static void skipWhitespace() {
   }
 }
 
+static Token string() {
+  while (peek() != '"' && !isAtEnd()) {
+    if (peek() == '\n') scanner.line++;
+    advance();
+  }
+
+  if (isAtEnd()) return errorToken("Unterminated string.");
+
+  // The closing quote.
+  advance();
+  return makeToken(TOKEN_STRING);
+}
+
 static char peekNext() {
   if (isAtEnd()) return '\0';
   return scanner.current[1];
